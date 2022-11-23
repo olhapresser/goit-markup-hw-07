@@ -9,15 +9,16 @@
 
     margin-right: 30px;
     margin-bottom: 30px;
+
+    &:nth-child(3n + 3) {
+        margin-right: 0px;
+    }
+
+    &:nth-last-child(-n + 3) {
+        margin-bottom: 0;
+    }
 }
 
-.cards__item:nth-child(3n + 3) {
-    margin-right: 0px;
-}
-
-.cards__item:nth-last-child(-n + 3) {
-    margin-bottom: 0;
-}
 
 .cards__info {
     padding: 24px 20px;
@@ -26,11 +27,6 @@
     border-left: 1px solid #EEEEEE;
 }
 
-.cards__link:hover,
-.cards__link:focus {
-    box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16), 0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
-    ;
-}
 
 .cards__link {
     display: block;
@@ -38,6 +34,12 @@
     transition-property: box-shadow;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16), 0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
+        ;
+    }
 }
 
 .cards__title {
@@ -84,9 +86,10 @@
     letter-spacing: 0.03em;
     color: var(--white-color);
     background-color: rgba(33, 150, 243, 0.9);
+
+    .cards__link:hover &,
+    .cards__link:focus & {
+        transform: translateY(0);
+    }
 }
 
-.cards__link:hover .dop-info__text,
-.cards__link:focus .dop-info__text {
-    transform: translateY(0);
-}
