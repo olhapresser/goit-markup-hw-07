@@ -972,7 +972,7 @@ border: none;
     background-image: url(../images/border.svg);
 }
 
-.check-input:checked+.checkbox__icon {
+.checkbox__input:checked+.checkbox__icon {
     background-image: url(../images/icon-check.svg);
 }
 
